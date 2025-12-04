@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pitou</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:7705/</link>
     <description>Recent content on pitou</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:7705/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to My Retro Blog</title>
-      <link>http://localhost:1313/posts/first-post/</link>
+      <link>http://localhost:7705/posts/first-post/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/first-post/</guid>
+      <guid>http://localhost:7705/posts/first-post/</guid>
       <description>&lt;p&gt;Welcome to my cyberpunk-themed blog!&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about/about/</link>
+      <link>http://localhost:7705/about/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/about/</guid>
-      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;&#xA;&lt;p&gt;CS student at Cairo University exploring new things in cybersecurity,I also love HxH&lt;/p&gt;</description>
+      <guid>http://localhost:7705/about/about/</guid>
+      <description>&lt;p&gt;CS student at Cairo University exploring new things in cybersecurity.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

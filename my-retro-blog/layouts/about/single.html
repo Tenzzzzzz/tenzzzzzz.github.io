@@ -7,18 +7,18 @@
             <span class="terminal-btn yellow"></span>
             <span class="terminal-btn green"></span>
         </div>
-        <div class="terminal-title">guest@pitou: ~/about</div>
+        <div class="terminal-title">guest@Pitou: ~/about</div>
     </div>
     <div class="terminal-body">
         <div class="terminal-output" id="terminalOutput">
-            <p><span class="terminal-prompt">guest@pitou:~$</span> cat about.txt</p>
+    <p class="pink-text"><span class="terminal-prompt">guest@Pitou:~$</span> about</p>
             <div class="about-text">
                 {{ .Content }}
             </div>
             <p>&nbsp;</p>
         </div>
         <div class="terminal-input-line">
-            <span class="terminal-prompt">guest@pitou:~$</span>
+            <span class="terminal-prompt">guest@Pitou:~$</span>
             <input type="text" class="terminal-input" id="terminalInput" autofocus>
             <span class="terminal-cursor">█</span>
         </div>
@@ -31,47 +31,58 @@
     
     const commands = {
         help: 'Available commands: help, clear, about, date, echo [text]',
-        about: 'CS student at Cairo University exploring cybersecurity and HxH enthusiast',
+        about: 'CS student at Cairo University exploring new things in cybersecurity.',
         date: new Date().toLocaleString(),
         clear: 'CLEAR'
     };
     
-    input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            const command = input.value.trim();
-            if (command) {
-                // Display the command
-                const cmdLine = document.createElement('p');
-                cmdLine.innerHTML = `<span class="terminal-prompt">guest@pitou:~$</span> ${command}`;
-                output.appendChild(cmdLine);
-                
-                // Process command
-                const response = document.createElement('p');
-                const parts = command.split(' ');
-                const cmd = parts[0].toLowerCase();
-                
-                if (cmd === 'clear') {
-                    output.innerHTML = '';
-                } else if (cmd === 'echo') {
-                    response.textContent = parts.slice(1).join(' ');
-                    output.appendChild(response);
-                } else if (commands[cmd]) {
-                    response.textContent = commands[cmd];
-                    output.appendChild(response);
-                } else {
-                    response.textContent = `bash: ${cmd}: command not found`;
-                    output.appendChild(response);
-                }
-                
-                const blank = document.createElement('p');
-                blank.innerHTML = '&nbsp;';
-                output.appendChild(blank);
-                
-                input.value = '';
-                output.scrollTop = output.scrollHeight;
-            }
-        }
-    });
+function escapeHtml(str) {
+  return str.replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+}
+
+input.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    const command = input.value.trim();
+    if (!command) return;
+
+    // Display the typed command (pink)
+    const cmdLine = document.createElement('p');
+    cmdLine.className = 'pink-text dynamic';
+    cmdLine.innerHTML = `<span class="terminal-prompt">guest@pitou:~$</span> ${escapeHtml(command)}`;
+    output.appendChild(cmdLine);
+
+    // Prepare response element (normal text)
+    const response = document.createElement('p');
+    response.className = 'normal-text dynamic';
+
+    const parts = command.split(' ');
+    const cmd = parts[0].toLowerCase();
+
+    if (cmd === 'clear') {
+      // remove only dynamic lines (preserve static about content)
+      const dynamicLines = output.querySelectorAll('.dynamic');
+      dynamicLines.forEach(node => node.remove());
+    } else if (cmd === 'echo') {
+      response.textContent = parts.slice(1).join(' ');
+      output.appendChild(response);
+    } else if (commands[cmd]) {
+      response.textContent = commands[cmd];
+      output.appendChild(response);
+    } else {
+      response.textContent = `bash: ${cmd}: command not found`;
+      output.appendChild(response);
+    }
+
+    // blank spacer
+    const blank = document.createElement('p');
+    blank.className = 'dynamic';
+    blank.innerHTML = '&nbsp;';
+    output.appendChild(blank);
+
+    input.value = '';
+    output.scrollTop = output.scrollHeight;
+  }
+});
     
     // Keep focus on input
     document.addEventListener('click', function() {

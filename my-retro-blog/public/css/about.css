@@ -1,12 +1,13 @@
 /* Terminal-Style About Page */
 .terminal-container {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 10px auto;
     background: #1e1e1e;
     border-radius: 8px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-family: 'Consolas';
     overflow: hidden;
+    position: relative;
 }
 
 .terminal-header {
@@ -43,17 +44,17 @@
 }
 
 .terminal-title {
-    color: #8b8b8b;
+    color: #ffffff;
     font-size: 13px;
     flex: 1;
     text-align: center;
 }
 
 .terminal-body {
-    background: #000;
+    background: #ffffff03;
     padding: 20px;
     min-height: 500px;
-    max-height: 600px;
+    max-height: 500px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -69,17 +70,17 @@
     margin: 0;
     line-height: 1.6;
     font-size: 14px;
-    color: #0f0;
+    color: rgb(255, 255, 255);
 }
 
 .terminal-prompt {
-    color: #00ff00;
+    color: #ffffff;
     font-weight: bold;
     margin-right: 8px;
 }
 
 .about-text {
-    color: #0f0;
+    color: rgb(253, 255, 253);
     margin: 15px 0;
     padding-left: 0;
 }
@@ -87,14 +88,14 @@
 .about-text h1,
 .about-text h2,
 .about-text h3 {
-    color: #00ff00;
+    color: #ffffff;
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
     font-weight: bold;
     margin: 10px 0;
 }
 
 .about-text p {
-    color: #00ff00 !important;
+    color: #ffffff !important;
     line-height: 1.6;
     margin: 8px 0;
 }
@@ -111,7 +112,7 @@
     background: transparent;
     border: none;
     outline: none;
-    color: #0f0;
+    color: rgb(255, 255, 255);
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 14px;
     padding: 0;
@@ -119,7 +120,7 @@
 }
 
 .terminal-cursor {
-    color: #0f0;
+    color: rgb(255, 255, 255);
     animation: blink 1s infinite;
     font-size: 14px;
 }
@@ -137,12 +138,12 @@
 
 .terminal-body::-webkit-scrollbar-track,
 .terminal-output::-webkit-scrollbar-track {
-    background: #000;
+    background: #ffffff;
 }
 
 .terminal-body::-webkit-scrollbar-thumb,
 .terminal-output::-webkit-scrollbar-thumb {
-    background: #333;
+    background: #ffffff;
     border-radius: 4px;
 }
 
@@ -152,5 +153,27 @@
 }
 
 .about-window-content{
-    background-color: black!important;
+    background-color: rgb(255, 255, 255)!important;
 }
+:root {
+  --terminal-pink: #ffffff;
+}
+
+/* Reusable pink class for commands and output */
+.pink-text {
+  color: var(--terminal-pink) !important;
+}
+
+/* Ensure prompt, cursor and input are pink too */
+.terminal-container .terminal-prompt,
+.terminal-container .terminal-cursor,
+.terminal-container .terminal-input {
+  color: var(--terminal-pink) !important;
+}
+
+/* Make static about text pink as well (overrides .about-text p white rule) */
+.terminal-container .about-text,
+.terminal-container .about-text * {
+  color: var(--terminal-pink) !important;
+}
+
