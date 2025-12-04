@@ -1,4 +1,3 @@
-/* About Page Styles - Matches home page dimensions */
 .about-page-container {
     text-align: center;
     display: flex;
@@ -35,4 +34,7 @@
     font-weight: 400;
     letter-spacing: 0.5px;
     text-shadow: 0 0 10px rgba(255, 179, 224, 0.8);
+}
+.about-window-content{
+    background-color: black !important;
 }
