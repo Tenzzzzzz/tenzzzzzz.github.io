@@ -184,7 +184,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(2.1px) brightness(0.8);
+    filter: blur(1.9px) brightness(0.6);
     z-index: 0;
 }
 

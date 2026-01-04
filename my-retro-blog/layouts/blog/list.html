@@ -1,0 +1,33 @@
+{{ define "main" }}
+<nav class="gitbook-breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <span class="current">{{ .Title }}</span>
+</nav>
+
+<h1 class="gitbook-title">{{ .Title }}</h1>
+
+{{ with .Content }}
+<div class="gitbook-content">
+    {{ . }}
+</div>
+{{ end }}
+
+<div class="gitbook-posts">
+    {{ range .RegularPages.ByDate.Reverse }}
+    <a href="{{ .Permalink }}" class="gitbook-post-card">
+        <div class="gitbook-post-card-icon">📄</div>
+        <div class="gitbook-post-card-content">
+            <div class="gitbook-post-card-title">{{ .Title | default "Untitled" }}</div>
+            <div class="gitbook-post-card-date">{{ .Date.Format "January 2, 2006" }}</div>
+        </div>
+        <div class="gitbook-post-card-arrow">→</div>
+    </a>
+    {{ else }}
+    <div class="gitbook-empty">
+        <div class="gitbook-empty-icon">📭</div>
+        <p>No posts yet. Check back soon!</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
