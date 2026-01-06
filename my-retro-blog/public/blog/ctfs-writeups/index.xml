@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CTFs Writeups on Pitou</title>
+    <link>http://localhost:2799/blog/ctfs-writeups/</link>
+    <description>Recent content in CTFs Writeups on Pitou</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:2799/blog/ctfs-writeups/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

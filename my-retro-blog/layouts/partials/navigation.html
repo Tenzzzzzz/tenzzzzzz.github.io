@@ -1,5 +1,5 @@
 <nav class="retro-nav">
     <a href="/" class="nav-item {{ if .IsHome }}active{{ end }}">Home</a>
-<a href="{{ "/blog/" | relURL }}" class="nav-item {{ if eq .Section "blog" }}active{{ end }}">Blog</a>
+<a href="{{ "/blog/" | relURL }}" target="_blank" class="nav-item {{ if eq .Section "blog" }}active{{ end }}">Blog</a>
     <a href="{{ "/about/about/" | relURL }}" class="nav-item {{ if eq .Section "about" }}active{{ end }}">About</a>
 </nav>
