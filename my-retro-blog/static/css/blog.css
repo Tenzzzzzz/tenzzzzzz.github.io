@@ -186,6 +186,10 @@ a {
    SIDEBAR
    ═══════════════════════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════════════════════
+   SIDEBAR - FIXED VERSION
+   ═══════════════════════════════════════════════════════════ */
+
 .sidebar {
     width: var(--sidebar-width);
     background-color: var(--bg-sidebar);
@@ -218,8 +222,8 @@ a {
 .nav-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 14px;
+    gap: 4px;
+    padding: 6px 8px;
     border-radius: 8px;
     transition: all 0.15s ease;
 }
@@ -241,32 +245,26 @@ a {
     font-weight: 500;
 }
 
-.nav-link {
-    flex: 1;
-    font-size: 15px;
-    color: var(--text-sidebar);
-    transition: color 0.15s ease;
-    line-height: 1.4;
-}
-
+/* ===== EXPAND BUTTON - FIXED ===== */
 .nav-expand {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 28px;
     width: 28px;
     height: 28px;
-    background: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
     border: none;
     border-radius: 6px;
     color: var(--text-muted);
     cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
     transition: all 0.15s ease;
-    opacity: 0;
-}
-
-.nav-item:hover .nav-expand {
-    opacity: 1;
-    color: var(--pink);
+    /* REMOVED: opacity: 0 - button is now always visible */
 }
 
 .nav-expand:hover {
@@ -274,36 +272,102 @@ a {
     color: var(--pink);
 }
 
-.nav-expand svg {
-    transition: transform 0.2s ease;
+.nav-expand:active {
+    background-color: rgba(236, 72, 153, 0.2);
 }
 
-.nav-group.expanded .nav-expand svg {
+/* Arrow Icon */
+.nav-expand svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+    pointer-events: none; /* Clicks pass through to button */
+}
+
+/* FIXED: Only rotate the DIRECT child's arrow, not all nested ones */
+.nav-group.expanded > .nav-item > .nav-expand svg {
     transform: rotate(90deg);
 }
 
-/* Submenu */
-.nav-submenu {
-    display: none;
-    flex-direction: column;
-    margin-left: 16px;
-    padding-left: 16px;
-    border-left: 1px solid var(--border-color);
-    margin-top: 4px;
-    gap: 2px;
+/* ===== BULLET FOR LEAF PAGES ===== */
+.nav-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    width: 28px;
+    height: 28px;
+    color: var(--text-muted);
+    font-size: 8px;
+    flex-shrink: 0;
 }
 
-.nav-group.expanded .nav-submenu {
+/* ===== NAV LINK ===== */
+.nav-link {
+    flex: 1;
+    font-size: 15px;
+    color: var(--text-sidebar);
+    transition: color 0.15s ease;
+    line-height: 1.4;
+    padding: 4px 8px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-link:hover {
+    color: var(--text-sidebar-hover);
+}
+
+/* ===== SUBMENU ===== */
+.nav-submenu {
     display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+    padding-left: 14px;
+    border-left: 1px solid var(--border-color);
+    gap: 2px;
+    
+    /* Animation properties */
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, 
+                opacity 0.2s ease-out,
+                margin-top 0.3s ease-out;
+    margin-top: 0;
+}
+
+
+/* FIXED: Use direct child selector */
+.nav-group.expanded > .nav-submenu {
+    max-height: 2000px; /* Large enough for any content */
+    opacity: 1;
+    margin-top: 4px;
+    transition: max-height 0.4s ease-in, 
+                opacity 0.3s ease-in,
+                margin-top 0.3s ease-in;
+}
+.nav-expand svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+.nav-group.expanded > .nav-item > .nav-expand svg {
+    transform: rotate(90deg);
 }
 
 .nav-submenu .nav-item {
-    padding: 8px 14px;
+    padding: 4px 8px;
 }
 
 .nav-submenu .nav-link {
     font-size: 14px;
 }
+
+/* ===== LEVEL-SPECIFIC STYLES ===== */
+
 
 /* ═══════════════════════════════════════════════════════════
    MAIN CONTENT - FULL WIDTH
@@ -1041,5 +1105,118 @@ a:focus-visible {
 @media (max-width: 1200px) {
     .toc {
         display: none;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SINGLE POST STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+/* Post Meta */
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+.meta-sep {
+    color: var(--text-muted);
+}
+
+/* Post Navigation */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-color);
+}
+
+.nav-prev,
+.nav-next {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    max-width: 45%;
+}
+
+.nav-prev:hover,
+.nav-next:hover {
+    border-color: var(--pink);
+    background-color: var(--bg-card-hover);
+}
+
+.nav-next {
+    text-align: right;
+    margin-left: auto;
+}
+
+.nav-direction {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.nav-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.nav-placeholder {
+    flex: 1;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.breadcrumb-item {
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+}
+
+.breadcrumb-item:hover:not(.current) {
+    color: var(--pink);
+}
+
+.breadcrumb-item.current {
+    color: var(--text-secondary);
+}
+
+.breadcrumb-sep {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .post-navigation {
+        flex-direction: column;
+    }
+    
+    .nav-prev,
+    .nav-next {
+        max-width: 100%;
+    }
+    
+    .nav-next {
+        text-align: left;
     }
 }

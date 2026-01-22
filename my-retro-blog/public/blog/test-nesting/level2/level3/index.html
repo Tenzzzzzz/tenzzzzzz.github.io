@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3588&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <title>Level 3 - Even Deeper · Pitou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body class="dark-theme">
+
+
+    
+    <div class="search-modal-overlay" id="searchModal">
+        <div class="search-modal">
+            <div class="search-modal-header">
+                <div class="search-input-wrapper">
+                    <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        class="search-modal-input" 
+                        id="searchInput" 
+                        placeholder="Search documentation..." 
+                        autocomplete="off"
+                    >
+                    <kbd class="search-esc">ESC</kbd>
+                </div>
+            </div>
+            <div class="search-modal-body" id="searchResults">
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>Type to start searching...</p>
+                </div>
+            </div>
+            <div class="search-modal-footer">
+                <div class="search-hints">
+                    <span class="search-hint">
+                        <kbd>↑</kbd><kbd>↓</kbd> Navigate
+                    </span>
+                    <span class="search-hint">
+                        <kbd>↵</kbd> Open
+                    </span>
+                    <span class="search-hint">
+                        <kbd>ESC</kbd> Close
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <img src="/images/avatar.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Pitou</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="search-btn" id="searchBtn" onclick="openSearch()">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <span class="search-text">Search...</span>
+                <div class="search-shortcut">
+                    <kbd>Ctrl</kbd>
+                    <kbd>K</kbd>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group  root-level">
+
+            <div class="nav-item ">
+                <a href="/blog/ctfs-writeups/" class="nav-link">
+                    CTFs Writeups
+                </a>
+                
+            </div>
+
+            
+        </div>
+    
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group has-children expanded root-level">
+
+            <div class="nav-item ">
+                <a href="/blog/crackmes-challenges/" class="nav-link">
+                    Crackmes Challengessss
+                </a>
+                
+                <button class="nav-expand" onclick="this.closest('.nav-group').classList.toggle('expanded')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+            </div>
+
+            
+            <div class="nav-submenu">
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group  ">
+
+            <div class="nav-item ">
+                <a href="/blog/crackmes-challenges/subset_of_crackmes/" class="nav-link">
+                    another
+                </a>
+                
+            </div>
+
+            
+        </div>
+    
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group  ">
+
+            <div class="nav-item ">
+                <a href="/blog/crackmes-challenges/first/" class="nav-link">
+                    Cccccccrackmsssss
+                </a>
+                
+            </div>
+
+            
+        </div>
+    
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group  ">
+
+            <div class="nav-item ">
+                <a href="/blog/crackmes-challenges/adsa/" class="nav-link">
+                    Crackmesdasda Challengessss
+                </a>
+                
+            </div>
+
+            
+        </div>
+    
+                
+            </div>
+            
+        </div>
+    
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group has-children expanded root-level">
+
+            <div class="nav-item ">
+                <a href="/blog/test-nesting/" class="nav-link">
+                    Level 1 - Test
+                </a>
+                
+                <button class="nav-expand" onclick="this.closest('.nav-group').classList.toggle('expanded')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+            </div>
+
+            
+            <div class="nav-submenu">
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group has-children expanded ">
+
+            <div class="nav-item ">
+                <a href="/blog/test-nesting/level2/" class="nav-link">
+                    Level 2 - Deeper
+                </a>
+                
+                <button class="nav-expand" onclick="this.closest('.nav-group').classList.toggle('expanded')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+            </div>
+
+            
+            <div class="nav-submenu">
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group has-children expanded ">
+
+            <div class="nav-item active">
+                <a href="/blog/test-nesting/level2/level3/" class="nav-link">
+                    Level 3 - Even Deeper
+                </a>
+                
+                <button class="nav-expand" onclick="this.closest('.nav-group').classList.toggle('expanded')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+            </div>
+
+            
+            <div class="nav-submenu">
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group  ">
+
+            <div class="nav-item ">
+                <a href="/blog/test-nesting/level2/level3/final_2post/" class="nav-link">
+                    Level 4 - Deepest Post
+                </a>
+                
+            </div>
+
+            
+        </div>
+    
+                
+                    
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-group  ">
+
+            <div class="nav-item ">
+                <a href="/blog/test-nesting/level2/level3/final_post/" class="nav-link">
+                    Level 4 - Deepest Post
+                </a>
+                
+            </div>
+
+            
+        </div>
+    
+                
+            </div>
+            
+        </div>
+    
+                
+            </div>
+            
+        </div>
+    
+                
+            </div>
+            
+        </div>
+    
+                
+            </nav>
+        </aside>
+
+        
+       
+<main class="main-content">
+    <div class="content-container">
+            <div class="reading-progress" id="readingProgress"></div>
+
+        
+        <div class="page-header">
+            <h1 class="page-title">Level 3 - Even Deeper</h1>
+        </div>
+
+        
+        <article class="article-content">
+            
+        </article>
+
+        
+        
+        <div class="page-links">
+            
+            <a href="/blog/test-nesting/level2/level3/final_2post/" class="page-link-card">
+                <span class="link-title">Level 4 - Deepest Post</span>
+                <svg class="link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </a>
+            
+            <a href="/blog/test-nesting/level2/level3/final_post/" class="page-link-card">
+                <span class="link-title">Level 4 - Deepest Post</span>
+                <svg class="link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </a>
+            
+        </div>
+        
+
+        
+        
+    </div>
+
+    
+    
+    <aside class="toc">
+        <div class="toc-title">On this page</div>
+        <nav class="toc-nav">
+            <nav id="TableOfContents"></nav>
+        </nav>
+    </aside>
+    
+</main>
+
+    </div>
+
+    
+    
+    
+
+
+<script>
+    let searchIndex = [];
+    let selectedIndex = -1;
+    let searchLoaded = false;
+
+    
+    const baseURL = document.querySelector('base')?.href || '/';
+
+    
+    async function loadSearchIndex() {
+        if (searchLoaded) return;
+        
+        try {
+            
+            const paths = [
+                '\/index.json',
+                '/index.json',
+                './index.json'
+            ];
+
+            for (const path of paths) {
+                try {
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        searchIndex = await response.json();
+                        searchLoaded = true;
+                        console.log('Search index loaded:', searchIndex.length, 'pages');
+                        return;
+                    }
+                } catch (e) {
+                    continue;
+                }
+            }
+            
+            console.error('Could not load search index from any path');
+        } catch (err) {
+            console.error('Error loading search index:', err);
+        }
+    }
+
+    
+    loadSearchIndex();
+
+    
+    function openSearch() {
+        const modal = document.getElementById('searchModal');
+        const input = document.getElementById('searchInput');
+        modal.classList.add('active');
+        input.value = '';
+        input.focus();
+        resetResults();
+        document.body.style.overflow = 'hidden';
+        
+        
+        loadSearchIndex();
+    }
+
+    
+    function closeSearch() {
+        const modal = document.getElementById('searchModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        selectedIndex = -1;
+    }
+
+    
+    function resetResults() {
+        const resultsContainer = document.getElementById('searchResults');
+        resultsContainer.innerHTML = `
+            <div class="search-empty-state">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <p>Type to start searching...</p>
+                <p class="search-debug">${searchIndex.length} pages indexed</p>
+            </div>
+        `;
+        selectedIndex = -1;
+    }
+
+    
+    function escapeRegex(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    
+    function escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    
+    function highlightText(text, query) {
+        if (!query || !text) return text;
+        const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
+        return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+    }
+
+    
+    function getContext(content, query, contextLength = 100) {
+        if (!content) return '';
+        
+        const lowerContent = content.toLowerCase();
+        const lowerQuery = query.toLowerCase();
+        const index = lowerContent.indexOf(lowerQuery);
+        
+        if (index === -1) {
+            return content.substring(0, contextLength * 2) + (content.length > contextLength * 2 ? '...' : '');
+        }
+        
+        const start = Math.max(0, index - contextLength);
+        const end = Math.min(content.length, index + query.length + contextLength);
+        
+        let context = content.substring(start, end);
+        
+        if (start > 0) context = '...' + context;
+        if (end < content.length) context = context + '...';
+        
+        return context;
+    }
+
+    
+    function formatSection(section, parent) {
+        if (parent) {
+            return parent.toUpperCase();
+        }
+        if (!section || section === 'home') return 'HOME';
+        return section.split(/[-_]/).map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1)
+        ).join(' ').toUpperCase();
+    }
+
+    
+    function performSearch(query) {
+        const resultsContainer = document.getElementById('searchResults');
+        
+        if (!query || query.length < 1) {
+            resetResults();
+            return;
+        }
+
+        if (!searchLoaded || searchIndex.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>Loading search index...</p>
+                </div>
+            `;
+            loadSearchIndex().then(() => performSearch(query));
+            return;
+        }
+
+        const lowerQuery = query.toLowerCase().trim();
+        
+        
+        const results = searchIndex
+            .map(item => {
+                let score = 0;
+                const titleLower = (item.title || '').toLowerCase();
+                const contentLower = (item.content || '').toLowerCase();
+                
+                
+                if (titleLower === lowerQuery) score += 100;
+                
+                else if (titleLower.startsWith(lowerQuery)) score += 50;
+                
+                else if (titleLower.includes(lowerQuery)) score += 30;
+                
+                
+                if (contentLower.includes(lowerQuery)) {
+                    score += 10;
+                    
+                    const matches = (contentLower.match(new RegExp(escapeRegex(lowerQuery), 'g')) || []).length;
+                    score += Math.min(matches * 2, 20);
+                }
+                
+                return { ...item, score };
+            })
+            .filter(item => item.score > 0)
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 15);
+
+        if (results.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <p>No results found for "<strong>${escapeHtml(query)}</strong>"</p>
+                    <p class="search-debug">Searched ${searchIndex.length} pages</p>
+                </div>
+            `;
+            selectedIndex = -1;
+            return;
+        }
+
+        let html = '<div class="search-results-list">';
+        
+        results.forEach((result, index) => {
+            const context = getContext(result.content || '', query, 80);
+            const highlightedTitle = highlightText(escapeHtml(result.title || 'Untitled'), query);
+            const highlightedContext = highlightText(escapeHtml(context), query);
+            const sectionName = formatSection(result.section, result.parent);
+            
+            html += `
+                <a href="${result.permalink}" class="search-result-item" data-index="${index}">
+                    <div class="result-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <div class="result-section">${sectionName}</div>
+                        <div class="result-title">${highlightedTitle}</div>
+                        ${highlightedContext ? `<div class="result-context">${highlightedContext}</div>` : ''}
+                    </div>
+                    <div class="result-arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+            `;
+        });
+        
+        html += '</div>';
+        resultsContainer.innerHTML = html;
+        selectedIndex = -1;
+    }
+
+    
+    function updateSelection() {
+        const items = document.querySelectorAll('.search-result-item');
+        items.forEach((item, index) => {
+            if (index === selectedIndex) {
+                item.classList.add('selected');
+                item.scrollIntoView({ block: 'nearest' });
+            } else {
+                item.classList.remove('selected');
+            }
+        });
+    }
+
+    
+    function navigateToSelected() {
+        const items = document.querySelectorAll('.search-result-item');
+        if (selectedIndex >= 0 && selectedIndex < items.length) {
+            window.location.href = items[selectedIndex].href;
+        }
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('searchInput');
+        const modal = document.getElementById('searchModal');
+
+        
+        let debounceTimer;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                performSearch(e.target.value);
+            }, 100);
+        });
+
+        
+        document.addEventListener('keydown', (e) => {
+            
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                openSearch();
+            }
+
+            
+            if (!modal.classList.contains('active')) return;
+
+            
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeSearch();
+            }
+
+            
+            const items = document.querySelectorAll('.search-result-item');
+            if (items.length === 0) return;
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                selectedIndex = Math.min(selectedIndex + 1, items.length - 1);
+                updateSelection();
+            }
+
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                selectedIndex = Math.max(selectedIndex - 1, 0);
+                updateSelection();
+            }
+
+            
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                if (selectedIndex >= 0) {
+                    navigateToSelected();
+                } else if (items.length > 0) {
+                    window.location.href = items[0].href;
+                }
+            }
+        });
+
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeSearch();
+            }
+        });
+
+        
+        document.addEventListener('mouseover', (e) => {
+            const item = e.target.closest('.search-result-item');
+            if (item) {
+                selectedIndex = parseInt(item.dataset.index);
+                updateSelection();
+            }
+        });
+    });
+</script>
+<script>
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    
+    if (docHeight > 0) {
+        const progress = (scrollTop / docHeight) * 100;
+        document.getElementById('readingProgress').style.width = progress + '%';
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    
+    if (docHeight > 0) {
+        const progress = (scrollTop / docHeight) * 100;
+        document.getElementById('readingProgress').style.width = progress + '%';
+    }
+});
+    </script>
+
+</body>
+</html>

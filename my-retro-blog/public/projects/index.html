@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3588&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitou - Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="projects-page">
+    <div class="window-frame">
+
+        
+        <div class="window-header">
+
+            
+            <div class="window-title">
+                <span>Pitou</span>
+            </div>
+
+            
+            <div class="header-icons">
+    <a href="https://www.linkedin.com/in/yosefkhaled/" target="_blank" class="icon-link">
+        <img src="/images/icons/linkedin.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://x.com/pitou_dead" target="_blank" class="icon-link">
+        <img src="/images/icons/x.png" alt="X">
+    </a>
+
+    <a href="https://discord.com/users/556850728614887434" target="_blank" class="icon-link">
+        <img src="/images/icons/discord.png" alt="Discord">
+    </a>
+</div>
+
+        </div>
+        
+
+        <div class="window-subbar">
+            <span>Connected, Protocol 7 Enabled</span>
+        </div>
+        
+        <nav class="retro-nav">
+    <a href="/" class="nav-item ">Home</a>
+<a href="/blog/" target="_blank" class="nav-item ">Blog</a>
+        <a href="/projects/" target="_blank" class="nav-item active">Projects</a>
+
+    <a href="/about/about/" class="nav-item ">About</a>
+
+</nav>
+
+        
+        <div class="window-content">
+
+    <canvas id="matrixRain"></canvas>
+
+            
+            
+<link rel="stylesheet" href="/css/projects.css">
+
+<div class="projects-container">
+    <div class="projects-content">
+        <h2 id="my-projects">My Projects</h2>
+<p>Here are some of the projects I&rsquo;ve worked on.</p>
+<h3 id="project-1---cool-thing">Project 1 - Cool Thing</h3>
+<p>A description of my first project.</p>
+<h3 id="project-2---another-thing">Project 2 - Another Thing</h3>
+<p>A description of my second project.</p>
+<h3 id="project-2---another-thing-1">Project 2 - Another Thing</h3>
+<p>A description of my second project.</p>
+<h3 id="project-2---another-thing-2">Project 2 - Another Thing</h3>
+<p>A description of my second project.</p>
+<h3 id="project-2---another-thing-3">Project 2 - Another Thing</h3>
+<p>A description of my second project.</p>
+<h3 id="project-2---another-thing-4">Project 2 - Another Thing</h3>
+<p>A description of my second project.### Project 2 - Another Thing
+A description of my second project.</p>
+<h3 id="project-2---another-thing-5">Project 2 - Another Thing</h3>
+<p>A description of my second project.### Project 2 - Another Thing
+A description of my second project.### Project 2 - Another Thing
+A description of my second project.### Project 2 - Another Thing
+A description of my second project.### Project 2 - Another Thing
+A description of my second project.### Project 2 - Another Thing
+A description of my second project.</p>
+
+    </div>
+</div>
+
+
+        </div>
+
+    </div>
+<script>
+
+(function() {
+    const canvas = document.getElementById('matrixRain');
+    if (!canvas) {
+        console.log('Canvas not found!');
+        return;
+    }
+    
+    console.log('Matrix Rain starting...');
+    
+    const ctx = canvas.getContext('2d');
+    const container = canvas.parentElement;
+    
+    
+    canvas.width = container.offsetWidth;
+    canvas.height = container.offsetHeight;
+    
+    console.log('Canvas size:', canvas.width, 'x', canvas.height);
+    
+    const chars = 'アイウエオカキクケコサシスセソタチツテト0123456789';
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = [];
+    
+    
+    for (let i = 0; i < columns; i++) {
+        drops[i] = Math.random() * -100;
+    }
+    
+    function draw() {
+        
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        
+        ctx.fillStyle = '#ff6ec7';
+        ctx.font = fontSize + 'px monospace';
+        
+        for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+            
+            
+            ctx.fillText(char, x, y);
+            
+            
+            drops[i]++;
+            
+            
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
+                drops[i] = 0;
+            }
+        }
+    }
+    
+    
+    setInterval(draw, 45);
+    
+    
+    window.addEventListener('resize', function() {
+        canvas.width = container.offsetWidth;
+        canvas.height = container.offsetHeight;
+    });
+})();
+</script>
+</body>
+</html>

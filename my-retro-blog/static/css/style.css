@@ -162,8 +162,9 @@ body {
 
 
 /* Window Content with Background Image */
+/* Window Content - Container */
+/* Window Content - Container */
 .window-content {
-    background: transparent;
     padding: 50px 80px;
     min-height: 500px;
     min-width: 1000px;
@@ -172,27 +173,76 @@ body {
     overflow: hidden;
 }
 
-/* Background Image with Blur */
+/* Background Image with Blur + Glitch */
 .window-content::before {
     content: '';
     position: absolute;
-    top: -10px;
-    left: -0px;
-    right: -0px;
-    bottom: -0px;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
     background-image: url('/images/background.png');
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(1.9px) brightness(0.6);
+    filter: blur(3px) brightness(0.5);
     z-index: 0;
 }
 
-/* Ensure content stays above background */
-.window-content > * {
-    position: relative;
-    z-index: 1;
+/* Scanlines overlay */
+.window-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0.6;
 }
+
+/* More noticeable glitch */
+@keyframes glitchBg {
+    0%, 90%, 100% {
+        transform: translate(0);
+        filter: blur(3px) brightness(0.6);
+    }
+    91% {
+        transform: translate(-5px, 2px);
+        filter: blur(3px) brightness(0.7) hue-rotate(20deg);
+    }
+    92% {
+        transform: translate(5px, -2px);
+        filter: blur(3px) brightness(0.5);
+    }
+    93% {
+        transform: translate(-3px, -1px);
+        filter: blur(3px) brightness(0.8) hue-rotate(-15deg);
+    }
+    94% {
+        transform: translate(3px, 1px);
+        filter: blur(3px) brightness(0.6);
+    }
+    95% {
+        transform: translate(0);
+        filter: blur(3px) brightness(0.6);
+    }
+}
+
+/* Ensure content stays above background and effects */
+.window-content > *:not(#matrixRain) {
+    position: relative;
+    z-index: 5;
+}
+
 
 /* Homepage Styles */
 .homepage-container {
@@ -325,3 +375,14 @@ body {
    ================================ */
 
 
+/* Matrix Rain Canvas - Behind content, on background only */
+#matrixRain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.4;
+}

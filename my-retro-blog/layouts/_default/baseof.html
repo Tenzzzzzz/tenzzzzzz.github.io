@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body{{ if eq .Section "about" }} class="about-page"{{ end }}>
+<body{{ if eq .Section "about" }} class="about-page"{{ else if eq .Section "projects" }} class="projects-page"{{ end }}>
     <div class="window-frame">
 
         <!-- Single Correct Header -->
@@ -45,9 +45,80 @@
         {{ partial "navigation.html" . }}
         
         <div class="window-content">
+
+    <canvas id="matrixRain"></canvas>
+
+            
             {{ block "main" . }}{{ end }}
         </div>
 
     </div>
+<script>
+// Matrix Rain
+(function() {
+    const canvas = document.getElementById('matrixRain');
+    if (!canvas) {
+        console.log('Canvas not found!');
+        return;
+    }
+    
+    console.log('Matrix Rain starting...');
+    
+    const ctx = canvas.getContext('2d');
+    const container = canvas.parentElement;
+    
+    // Set canvas size
+    canvas.width = container.offsetWidth;
+    canvas.height = container.offsetHeight;
+    
+    console.log('Canvas size:', canvas.width, 'x', canvas.height);
+    
+    const chars = 'アイウエオカキクケコサシスセソタチツテト0123456789';
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = [];
+    
+    // Initialize drops
+    for (let i = 0; i < columns; i++) {
+        drops[i] = Math.random() * -100;
+    }
+    
+    function draw() {
+        // Fade effect
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Pink characters
+        ctx.fillStyle = '#ff6ec7';
+        ctx.font = fontSize + 'px monospace';
+        
+        for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+            
+            // Draw character
+            ctx.fillText(char, x, y);
+            
+            // Move drop down
+            drops[i]++;
+            
+            // Reset to top with random delay
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
+                drops[i] = 0;
+            }
+        }
+    }
+    
+    // Start animation
+    setInterval(draw, 45);
+    
+    // Resize handler
+    window.addEventListener('resize', function() {
+        canvas.width = container.offsetWidth;
+        canvas.height = container.offsetHeight;
+    });
+})();
+</script>
 </body>
 </html>

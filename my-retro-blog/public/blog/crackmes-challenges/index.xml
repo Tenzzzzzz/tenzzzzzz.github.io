@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Crackmes Challenges on Pitou</title>
-    <link>http://localhost:1313/blog/crackmes-challenges/</link>
-    <description>Recent content in Crackmes Challenges on Pitou</description>
+    <title>Crackmes Challengessss on Pitou</title>
+    <link>http://localhost:3588/blog/crackmes-challenges/</link>
+    <description>Recent content in Crackmes Challengessss on Pitou</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/blog/crackmes-challenges/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:3588/blog/crackmes-challenges/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cccccccrackmsssss</title>
+      <link>http://localhost:3588/blog/crackmes-challenges/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3588/blog/crackmes-challenges/first/</guid>
+      <description>&lt;p&gt;i see myself&#xA;with main founs&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Crackmesdasda Challengessss</title>
+      <link>http://localhost:3588/blog/crackmes-challenges/adsa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3588/blog/crackmes-challenges/adsa/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3588&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pitou - </title>
@@ -45,11 +45,18 @@
         <nav class="retro-nav">
     <a href="/" class="nav-item ">Home</a>
 <a href="/blog/" target="_blank" class="nav-item ">Blog</a>
+        <a href="/projects/" target="_blank" class="nav-item ">Projects</a>
+
     <a href="/about/about/" class="nav-item active">About</a>
+
 </nav>
 
         
         <div class="window-content">
+
+    <canvas id="matrixRain"></canvas>
+
+            
             
 <link rel="stylesheet" href="/css/about.css">
 <div class="terminal-container">
@@ -66,6 +73,15 @@
     <p class="pink-text"><span class="terminal-prompt">guest@Pitou:~$</span> about</p>
             <div class="about-text">
                 <p>CS student at Cairo University exploring new things in cybersecurity.</p>
+<p>currently focusing on =&gt;</p>
+<ul>
+<li>
+<p><strong>Malware Analysis</strong></p>
+</li>
+<li>
+<p><strong>Threat Detection Engineering</strong></p>
+</li>
+</ul>
 
             </div>
             <p>&nbsp;</p>
@@ -146,5 +162,72 @@ input.addEventListener('keypress', function(e) {
         </div>
 
     </div>
+<script>
+
+(function() {
+    const canvas = document.getElementById('matrixRain');
+    if (!canvas) {
+        console.log('Canvas not found!');
+        return;
+    }
+    
+    console.log('Matrix Rain starting...');
+    
+    const ctx = canvas.getContext('2d');
+    const container = canvas.parentElement;
+    
+    
+    canvas.width = container.offsetWidth;
+    canvas.height = container.offsetHeight;
+    
+    console.log('Canvas size:', canvas.width, 'x', canvas.height);
+    
+    const chars = 'アイウエオカキクケコサシスセソタチツテト0123456789';
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = [];
+    
+    
+    for (let i = 0; i < columns; i++) {
+        drops[i] = Math.random() * -100;
+    }
+    
+    function draw() {
+        
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        
+        ctx.fillStyle = '#ff6ec7';
+        ctx.font = fontSize + 'px monospace';
+        
+        for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+            
+            
+            ctx.fillText(char, x, y);
+            
+            
+            drops[i]++;
+            
+            
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
+                drops[i] = 0;
+            }
+        }
+    }
+    
+    
+    setInterval(draw, 45);
+    
+    
+    window.addEventListener('resize', function() {
+        canvas.width = container.offsetWidth;
+        canvas.height = container.offsetHeight;
+    });
+})();
+</script>
 </body>
 </html>

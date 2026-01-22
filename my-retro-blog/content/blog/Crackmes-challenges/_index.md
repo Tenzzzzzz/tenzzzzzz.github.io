@@ -1,6 +1,5 @@
 ---
-title: "Crackmes Challenges"
+title: "Crackmes Challengessss"
 weight: 2
 ---
-
-My crackme solutions.
+sad
