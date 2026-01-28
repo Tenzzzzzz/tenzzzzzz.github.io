@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pitou</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:9635/</link>
     <description>Recent content on Pitou</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:9635/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Level 4 - Deepest Post</title>
-      <link>http://localhost:1313/blog/test-nesting/level2/level3/final_2post/</link>
+      <link>http://localhost:9635/blog/test-nesting/level2/level3/final_2post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/test-nesting/level2/level3/final_2post/</guid>
+      <guid>http://localhost:9635/blog/test-nesting/level2/level3/final_2post/</guid>
       <description>&lt;p&gt;This is the deepest level2!&lt;/p&gt;</description>
     </item>
     <item>
-      <title>aswan</title>
-      <link>http://localhost:1313/blog/ctfs-writeups/1/</link>
+      <title>AswanCTF 2025 Finals</title>
+      <link>http://localhost:9635/blog/ctfs-writeups/1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/ctfs-writeups/1/</guid>
-      <description>&lt;p&gt;first chall&lt;/p&gt;</description>
+      <guid>http://localhost:9635/blog/ctfs-writeups/1/</guid>
+      <description>&lt;h2 id=&#34;rev-eaas&#34;&gt;[REV] EAAS &lt;a href=&#34;#d4d7&#34; id=&#34;d4d7&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;We are given an ELF file that encrypts our input data in some way &lt;/p&gt;&#xA;&lt;p&gt;Also an encrypted_string-&amp;gt;&amp;ldquo;CAS{Y6oduOh_X3_gQu3xn6t_EXF_J3vxhf_Ca_3yM7zln}&amp;rdquo;&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:9635/blog_images/ctfs_writeups/1/001.png&#34; alt=&#34;&#34;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;&#xD;&#xA;&lt;p&gt;It seems that the index of input characters does not affect the encryption algorithm &lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:9635/blog_images/ctfs_writeups/1/002.png&#34; alt=&#34;&#34;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;&#xD;&#xA;&lt;p&gt;Here is the encryption function&lt;/p&gt;&#xA;&lt;div&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:9635/blog_images/ctfs_writeups/1/003.png&#34; alt=&#34;&#34;&gt;&lt;figcaption&gt;&lt;p&gt;it take char by char in rax register then pass it as paramter to shift_char function&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt; &lt;figure&gt;&lt;img src=&#34;http://localhost:9635/blog_images/ctfs_writeups/1/004.png&#34; alt=&#34;&#34;&gt;&lt;figcaption&gt;&lt;p&gt;this the encryption algorithm , it is one to one encryptin &lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;We can brute force the program by trying all possible ASCII characters to see what matches the encrypted flag&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about/about/</link>
+      <link>http://localhost:9635/about/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/about/</guid>
-      <description>&lt;p&gt;CS student at Cairo University exploring new things in cybersecurity.&lt;/p&gt;&#xA;&lt;p&gt;currently focusing on =&amp;gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Malware Analysis&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Threat Detection Engineering&lt;/strong&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:9635/about/about/</guid>
+      <description>&lt;p&gt;CS student at Cairo University exploring new things in cybersecurity.&lt;/p&gt;&#xA;&lt;p&gt;currently focusing on =&amp;gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash; &lt;strong&gt;Malware Analysis&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ndash; &lt;strong&gt;Threat Detection Engineering&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Level 4 - Deepest Post</title>
-      <link>http://localhost:1313/blog/test-nesting/level2/level3/final_post/</link>
+      <link>http://localhost:9635/blog/test-nesting/level2/level3/final_post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/test-nesting/level2/level3/final_post/</guid>
+      <guid>http://localhost:9635/blog/test-nesting/level2/level3/final_post/</guid>
       <description>&lt;p&gt;This is the deepest level!&lt;/p&gt;</description>
     </item>
   </channel>

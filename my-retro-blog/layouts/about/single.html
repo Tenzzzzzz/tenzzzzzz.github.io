@@ -53,8 +53,8 @@
             output.appendChild(cmdLine);
 
             // Prepare response element (normal text)
-            const response = document.createElement('p');
-            response.className = 'normal-text dynamic';
+            const response = document.createElement('div'); // Matches the static structure
+            response.className = 'about-text dynamic';
 
             const parts = command.split(' ');
             const cmd = parts[0].toLowerCase();

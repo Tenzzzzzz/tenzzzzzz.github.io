@@ -1,165 +1,159 @@
 /* Terminal-Style About Page */
 .terminal-container {
-  max-width: 900px;
-  margin: 10px auto;
-  background: #1e1e1e;
-  border-radius: 8px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  font-family: "Consolas";
-  overflow: hidden;
-  position: relative;
+    max-width: 900px;
+    margin: 10px auto;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    font-family: 'Consolas';
+    overflow: hidden;
+    position: relative;
 }
 
 .terminal-header {
-  background: #2d2d2d;
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-bottom: 1px solid #3d3d3d;
+    background: #2d2d2d;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #3d3d3d;
 }
 
 .terminal-buttons {
-  display: flex;
-  gap: 8px;
+    display: flex;
+    gap: 8px;
 }
 
 .terminal-btn {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .terminal-btn.red {
-  background: #ff5f56;
+    background: #ff5f56;
 }
 
 .terminal-btn.yellow {
-  background: #ffbd2e;
+    background: #ffbd2e;
 }
 
 .terminal-btn.green {
-  background: #27c93f;
+    background: #27c93f;
 }
 
 .terminal-title {
-  color: #ffffff;
-  font-size: 13px;
-  flex: 1;
-  text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+    flex: 1;
+    text-align: center;
 }
 
 .terminal-body {
-  background: #ffffff03;
-  padding: 20px;
-  min-height: 500px;
-  max-height: 500px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+    background: #ffffff03;
+    padding: 20px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .terminal-output {
-  flex: 1;
-  overflow-y: auto;
-  margin-bottom: 10px;
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 .terminal-output p {
-  margin: 0;
-  line-height: 2.1;
-  font-size: 14px;
-  color: rgb(255, 255, 255);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
 }
 
 .terminal-prompt {
-  color: #ffffff;
-  font-weight: bold;
-  margin-right: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 8px;
 }
 
 .about-text {
-  color: rgb(253, 255, 253);
-  margin-bottom: 15px;
-  padding-left: 0;
+    color: rgb(253, 255, 253);
+    margin: 15px 0;
+    padding-left: 0;
 }
 
 .about-text h1,
 .about-text h2,
 .about-text h3 {
-  color: #ffffff;
-  font-family: "Consolas", "Monaco", "Courier New", monospace;
-  font-weight: bold;
-  margin: 10px 0;
+    color: #ffffff;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 .about-text p {
-  color: #ffffff !important;
-  line-height: 2.1;
-  /* margin: 8px 0; */
+    color: #ffffff !important;
+    line-height: 1.6;
+    margin: 8px 0;
 }
 
 .terminal-input-line {
-  display: flex;
-  align-items: center;
-  border-top: 1px solid #222;
-  padding-top: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #222;
+    padding-top: 10px;
 }
 
 .terminal-input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  font-family: "Consolas", "Monaco", "Courier New", monospace;
-  font-size: 14px;
-  padding: 0;
-  margin: 0 8px;
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    padding: 0;
+    margin: 0 8px;
 }
 
 .terminal-cursor {
-  color: rgb(255, 255, 255);
-  animation: blink 1s infinite;
-  font-size: 14px;
+    color: rgb(255, 255, 255);
+    animation: blink 1s infinite;
+    font-size: 14px;
 }
 
 @keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 /* Scrollbar styling */
 .terminal-body::-webkit-scrollbar,
 .terminal-output::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 .terminal-body::-webkit-scrollbar-track,
 .terminal-output::-webkit-scrollbar-track {
-  background: #ffffff;
+    background: #ffffff;
 }
 
 .terminal-body::-webkit-scrollbar-thumb,
 .terminal-output::-webkit-scrollbar-thumb {
-  background: #ffffff;
-  border-radius: 4px;
+    background: #ffffff;
+    border-radius: 4px;
 }
 
 .terminal-body::-webkit-scrollbar-thumb:hover,
 .terminal-output::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
 }
 
-.about-window-content {
-  background-color: rgb(255, 255, 255) !important;
+.about-window-content{
+    background-color: rgb(255, 255, 255)!important;
 }
 :root {
   --terminal-pink: #ffffff;
@@ -182,3 +176,4 @@
 .terminal-container .about-text * {
   color: var(--terminal-pink) !important;
 }
+

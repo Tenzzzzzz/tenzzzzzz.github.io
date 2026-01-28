@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=9635&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pitou - </title>
@@ -74,8 +74,8 @@
             <div class="about-text">
                 <p>CS student at Cairo University exploring new things in cybersecurity.</p>
 <p>currently focusing on =&gt;</p>
-<p><strong>Malware Analysis</strong></p>
-<p><strong>Threat Detection Engineering</strong></p>
+<p>&ndash; <strong>Malware Analysis</strong></p>
+<p>&ndash; <strong>Threat Detection Engineering</strong></p>
 
             </div>
             <p>&nbsp;</p>
@@ -94,7 +94,7 @@
 
     const commands = {
         help: 'Available commands: help, clear, about, date, echo [text]',
-        about: `\u003cp\u003eCS student at Cairo University exploring new things in cybersecurity.\u003c\/p\u003e\n\u003cp\u003ecurrently focusing on =\u0026gt;\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eMalware Analysis\u003c\/strong\u003e\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eThreat Detection Engineering\u003c\/strong\u003e\u003c\/p\u003e\n`,
+        about: `\u003cp\u003eCS student at Cairo University exploring new things in cybersecurity.\u003c\/p\u003e\n\u003cp\u003ecurrently focusing on =\u0026gt;\u003c\/p\u003e\n\u003cp\u003e\u0026ndash; \u003cstrong\u003eMalware Analysis\u003c\/strong\u003e\u003c\/p\u003e\n\u003cp\u003e\u0026ndash; \u003cstrong\u003eThreat Detection Engineering\u003c\/strong\u003e\u003c\/p\u003e\n`,
         date: new Date().toLocaleString(),
         clear: ' ',
         
@@ -116,8 +116,8 @@
             output.appendChild(cmdLine);
 
             
-            const response = document.createElement('p');
-            response.className = 'normal-text dynamic';
+            const response = document.createElement('div'); 
+            response.className = 'about-text dynamic';
 
             const parts = command.split(' ');
             const cmd = parts[0].toLowerCase();

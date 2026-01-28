@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/test-nesting/level2/level3/final_2post/</loc>
+    <loc>http://localhost:9635/blog/test-nesting/level2/level3/final_2post/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/ctfs-writeups/1/</loc>
+    <loc>http://localhost:9635/blog/ctfs-writeups/1/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/ctfs-writeups/</loc>
+    <loc>http://localhost:9635/blog/ctfs-writeups/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/test-nesting/</loc>
+    <loc>http://localhost:9635/blog/test-nesting/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/about/</loc>
+    <loc>http://localhost:9635/about/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:9635/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:9635/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/test-nesting/level2/</loc>
+    <loc>http://localhost:9635/blog/test-nesting/level2/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/test-nesting/level2/level3/</loc>
+    <loc>http://localhost:9635/blog/test-nesting/level2/level3/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/test-nesting/level2/level3/final_post/</loc>
+    <loc>http://localhost:9635/blog/test-nesting/level2/level3/final_post/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:9635/</loc>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>http://localhost:9635/projects/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:9635/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>http://localhost:9635/blog/</loc>
   </url>
 </urlset>
