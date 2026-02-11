@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1250/blog/ctfs-writeups/1/</loc>
+    <loc>http://localhost:7865/blog/ctfs-writeups/1/</loc>
   </url><url>
-    <loc>http://localhost:1250/blog/ctfs-writeups/</loc>
+    <loc>http://localhost:7865/blog/ctfs-writeups/</loc>
   </url><url>
-    <loc>http://localhost:1250/blog/crackmes/1/</loc>
+    <loc>http://localhost:7865/blog/crackmes/1/</loc>
   </url><url>
-    <loc>http://localhost:1250/blog/ctfs-writeups/2/</loc>
+    <loc>http://localhost:7865/blog/ctfs-writeups/2/</loc>
   </url><url>
-    <loc>http://localhost:1250/blog/crackmes/</loc>
+    <loc>http://localhost:7865/blog/crackmes/</loc>
   </url><url>
-    <loc>http://localhost:1250/blog/ctfs-writeups/3/</loc>
+    <loc>http://localhost:7865/blog/ctfs-writeups/3/</loc>
   </url><url>
-    <loc>http://localhost:1250/blog/ctfs-writeups/4/</loc>
+    <loc>http://localhost:7865/blog/ctfs-writeups/4/</loc>
   </url><url>
-    <loc>http://localhost:1250/about/about/</loc>
+    <loc>http://localhost:7865/about/about/</loc>
   </url><url>
-    <loc>http://localhost:1250/about/</loc>
+    <loc>http://localhost:7865/about/</loc>
   </url><url>
-    <loc>http://localhost:1250/categories/</loc>
+    <loc>http://localhost:7865/categories/</loc>
   </url><url>
-    <loc>http://localhost:1250/</loc>
+    <loc>http://localhost:7865/</loc>
   </url><url>
-    <loc>http://localhost:1250/projects/</loc>
+    <loc>http://localhost:7865/projects/</loc>
   </url><url>
-    <loc>http://localhost:1250/tags/</loc>
+    <loc>http://localhost:7865/tags/</loc>
   </url><url>
-    <loc>http://localhost:1250/blog/</loc>
+    <loc>http://localhost:7865/blog/</loc>
   </url>
 </urlset>

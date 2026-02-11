@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Crackmes challenges on Pitou</title>
-    <link>http://localhost:1250/blog/crackmes/</link>
+    <link>http://localhost:7865/blog/crackmes/</link>
     <description>Recent content in Crackmes challenges on Pitou</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1250/blog/crackmes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:7865/blog/crackmes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ransomware</title>
-      <link>http://localhost:1250/blog/crackmes/1/</link>
+      <link>http://localhost:7865/blog/crackmes/1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1250/blog/crackmes/1/</guid>
-      <description>&lt;p&gt;Program Link ⇒&lt;a href=&#34;https://crackmes.one/crackme/6848e4102b84be7ea77437ba&#34;&gt;https://crackmes.one/crackme/6848e4102b84be7ea77437ba&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;So we are provided with an exe and a PCAP file&lt;/p&gt;&#xA;&lt;div data-full-width=&#34;false&#34;&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1250/blog_images/Crackmes/1/001.png&#34; alt=&#34;&#34;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;I will start by performing some static analysis of the .exe file to see what it has.&lt;/p&gt;&#xA;&lt;p&gt;Many tools are used for this purpose, but the one that is most reliable for me is &lt;a href=&#34;https://github.com/horsicq/Detect-It-Easy&#34;&gt;DIE&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;As I see in the result, an unpacked C program that uses the OpenSSL library, which indicates that the malware uses some sort of cryptography functions, which makes sense, since it is ransomware.&lt;/p&gt;</description>
+      <guid>http://localhost:7865/blog/crackmes/1/</guid>
+      <description>&lt;p&gt;Program Link ⇒&lt;a href=&#34;https://crackmes.one/crackme/6848e4102b84be7ea77437ba&#34;&gt;https://crackmes.one/crackme/6848e4102b84be7ea77437ba&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;So we are provided with an exe and a PCAP file&lt;/p&gt;&#xA;&lt;div data-full-width=&#34;false&#34;&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:7865/blog_images/Crackmes/1/001.png&#34; alt=&#34;&#34;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;I will start by performing some static analysis of the .exe file to see what it has.&lt;/p&gt;&#xA;&lt;p&gt;Many tools are used for this purpose, but the one that is most reliable for me is &lt;a href=&#34;https://github.com/horsicq/Detect-It-Easy&#34;&gt;DIE&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;As I see in the result, an unpacked C program that uses the OpenSSL library, which indicates that the malware uses some sort of cryptography functions, which makes sense, since it is ransomware.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
