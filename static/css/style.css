@@ -54,6 +54,13 @@ body {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        background-attachment: scroll;
+    }
+}
+
 /* Window Frame Style - Rounded Corners */
 .window-frame {
     background: #c0c0c0;
@@ -66,11 +73,40 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     animation: slideInWithBlur 0.7s ease-out;
 }
+
+@media (max-width: 768px) {
+    .window-frame {
+        border-radius: 15px;
+        border-width: 3px;
+        min-height: auto;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .window-frame {
+        border-radius: 10px;
+        border-width: 2px;
+        margin: 5px;
+    }
+}
 body.projects-page .window-content {
     padding: 20px 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    body.projects-page .window-content {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body.projects-page .window-content {
+        padding: 10px 15px;
+    }
 }
 
 .window-header {
@@ -92,13 +128,42 @@ body.projects-page .window-content {
         0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 480px) {
+    .window-header {
+        padding: 10px 15px;
+        height: 36px;
+    }
+}
+
 .window-title {
     display: block !important;
     position: absolute;
     left: 20px;
-    font-size: 1.4em;
+ 
+
+@media (max-width: 768px) {
+    .window-title {
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .window-title {
+        font-size: 0.9em;
+        letter-spacing: 0px;
+        left: 10px;
+    }
+}   font-size: 1.4em;
     font-weight: 700;
-    color: #000000;
+ 
+
+@media (max-width: 480px) {
+    .header-icons {
+        gap: 8px;
+    }
+}   color: #000000;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: 'Silkscreen', cursive;
@@ -177,6 +242,21 @@ body.projects-page .window-content {
     color: #000000;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .window-content {
+        padding: 30px 20px;
+        min-width: auto;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .window-content {
+        padding: 20px 15px;
+        min-height: 250px;
+    }
 }
 
 /* Background Image with Blur + Glitch */
@@ -258,7 +338,22 @@ body.projects-page .window-content {
     align-items: center;
     min-height: 400px;
     position: relative;
-    z-index: 1;
+ 
+
+@media (max-width: 768px) {
+    .glitch-text {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glitch-text {
+        font-size: 1.4em;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+    }
+}   z-index: 1;
 }
 
 
