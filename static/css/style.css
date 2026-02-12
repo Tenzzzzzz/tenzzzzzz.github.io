@@ -176,7 +176,7 @@ body.projects-page .window-content {
     right: -20px;
     bottom: -20px;
     background-image: url('/images/background.png');
-    background-size: 100%;
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(1px) brightness(3px);
