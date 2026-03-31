@@ -18,7 +18,7 @@
     --bg-card-hover: #e8e8e8;
     --bg-input: #f0f0f0;
     --text-primary: rgb(255, 255, 255);
-    --text-secondary: #fffffff6;
+    --text-secondary: #fffffff2;
     --text-muted: #8a8a8a;
     --text-sidebar: #5c5c5c;
     --text-sidebar-hover: #111111;
@@ -442,29 +442,22 @@ a {
    ARTICLE CONTENT (UPDATED: max width + wrap + figure/caption)
    ═══════════════════════════════════════════════════════════ */
 
-/* Target bold text that acts as a file header */
-.article-content p > strong:first-child {
-    display: block;
-    font-size: 20px;
-    color: var(--accent); /* Uses your indigo/pink accent */
-    margin-top: 24px;
-    margin-bottom: 4px;
-    font-family: 'SF Mono', 'Cascadia Code', monospace;
-    border-left: 4px solid var(--accent);
-    padding-left: 12px;
+.article-content {
+    font-size: 18px;
+    line-height: 1.85;
+    color: var(--text-secondary);
+    font-weight: bold;
+
+    /* UPDATED: hard limit for central reading column */
+    max-width: var(--content-max);
 }
 
-/* Style the hash immediately following the bold filename */
-.article-content p > strong:first-child + br + em,
-.article-content p > strong:first-child + em {
-    display: block;
-    font-size: 14px;
-    color: var(--text-muted);
-    background: var(--bg-card);
-    padding: 4px 12px;
-    border-radius: 4px;
-    width: fit-content;
-    font-family: monospace;
+/* UPDATED: prevent long tokens from overflowing into TOC */
+.article-content,
+.article-content p,
+.article-content li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .article-content h1 {
