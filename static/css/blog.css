@@ -17,8 +17,8 @@
     --bg-card: #f5f5f5;
     --bg-card-hover: #e8e8e8;
     --bg-input: #f0f0f0;
-    --text-primary: #111111;
-    --text-secondary: #5c5c5c;
+    --text-primary: rgb(255, 255, 255);
+    --text-secondary: #ffffffda;
     --text-muted: #8a8a8a;
     --text-sidebar: #5c5c5c;
     --text-sidebar-hover: #111111;
@@ -49,7 +49,7 @@
     --bg-card: #1e1f20;
     --bg-card-hover: #2a2b2c;
     --bg-input: #1e1f20;
-    --text-primary: #e5e7ebf0;   /* softer than pure white */
+    --text-primary: #f4f4f4;   /* softer than pure white */
     --text-secondary: #b6bcc6; /* slightly dimmer */
     --text-muted: #8b93a1; 
     --text-sidebar: #9ca3af;
@@ -445,7 +445,7 @@ a {
 .article-content {
     font-size: 18px;
     line-height: 1.85;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-weight: bold;
 
     /* UPDATED: hard limit for central reading column */
