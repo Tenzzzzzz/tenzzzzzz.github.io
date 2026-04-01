@@ -18,7 +18,7 @@
     --bg-card-hover: #e8e8e8;
     --bg-input: #f0f0f0;
     --text-primary: rgb(255, 255, 255);
-    --text-secondary: #fffffff2;
+    --text-secondary: #fffffff6;
     --text-muted: #8a8a8a;
     --text-sidebar: #5c5c5c;
     --text-sidebar-hover: #111111;
@@ -50,7 +50,7 @@
     --bg-card-hover: #2a2b2c;
     --bg-input: #1e1f20;
     --text-primary: #f4f4f4;   /* softer than pure white */
-    --text-secondary: #b6bcc6; /* slightly dimmer */
+    --text-secondary: #ffffffed; /* slightly dimmer */
     --text-muted: #8b93a1; 
     --text-sidebar: #9ca3af;
     --text-sidebar-hover: #FFFFFF;
@@ -445,11 +445,18 @@ a {
 .article-content {
     font-size: 18px;
     line-height: 1.85;
-    color: var(--text-secondary);
-    font-weight: bold;
-
-    /* UPDATED: hard limit for central reading column */
+    color: var(--text-secondary);        /* ← was --text-secondary (gray) */
+    /* font-weight: bold;  ← REMOVE THIS LINE entirely */
     max-width: var(--content-max);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+/* Make bold text visually distinct */
+.article-content strong,
+.article-content b {
+    font-weight: 900;
+    color: var(--text-primary);
+        /* ensures it's the brightest white */
 }
 
 /* UPDATED: prevent long tokens from overflowing into TOC */
@@ -498,13 +505,23 @@ a {
 }
 .article-content a:hover { text-decoration: underline; }
 
-.article-content ul,
+.article-content ul {
+    margin: 18px 0;
+    padding-left: 28px;
+    list-style-type: disc;     /* ← ADD: standard round bullets */
+}
+
 .article-content ol {
     margin: 18px 0;
     padding-left: 28px;
+    list-style-type: decimal;  /* ← ADD: standard numbered list */
 }
 
-.article-content li { margin-bottom: 10px; }
+.article-content li {
+    margin-bottom: 10px;
+    font-weight: 400;          /* ← ADD: ensures list items are normal weight */
+    color: var(--text-primary); /* ← ADD: keeps them readable, not gray */
+}
 
 .article-content code {
     background-color: var(--bg-card);
