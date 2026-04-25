@@ -545,6 +545,7 @@ a {
     margin: 28px 0;
 }
 
+
 .article-content pre code {
     background: none;
     padding: 0;
@@ -1053,4 +1054,28 @@ a:focus-visible {
     .post-navigation { flex-direction: column; }
     .nav-prev, .nav-next { max-width: 100%; }
     .nav-next { text-align: left; }
+}
+/* Always-visible scrollbar for code blocks */
+.article-content pre::-webkit-scrollbar {
+    height: 10px;
+}
+
+.article-content pre::-webkit-scrollbar-track {
+    background: rgba(253, 253, 253, 0.9);
+    border-radius: 5px;
+}
+
+.article-content pre::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+}
+
+.article-content pre::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Firefox */
+.article-content pre {
+    scrollbar-width: auto;                    /* 'thin' → 'auto' for better visibility */
+    scrollbar-color: rgba(255, 255, 255, 0.849) rgba(255,255,255,0.05);
 }
