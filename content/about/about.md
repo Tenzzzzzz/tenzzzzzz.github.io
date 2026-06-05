@@ -1,4 +1,4 @@
-CS student at Cairo University exploring new things in cybersecurity.
+Cybersecurity Engineer.
 
 currently focusing on =>
 
